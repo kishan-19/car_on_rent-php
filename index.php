@@ -9,6 +9,7 @@
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
 
@@ -120,62 +121,31 @@
     <section class="car_delaite">
         <div class="container py-5">
             <div class="row">
-            <div class="col-md-3 col-sm-10 mt-4">
-                <div class="card" style="width: 15rem;">
-                    <img class="card-img-top card_img" src="./image/car-1.jpg" alt="Card image cap">
-                    <div class="card-body car_info">
-                        <h5 class="card-title">Mercedes Grand Sedan</h5>
-                        <p class="card-text">petrol</p>
-                        <p class="card-text">Autometic &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span>$500</span>/Day</p>
-                        <a href="#" class="btn mt-2">Book Now </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-10 mt-4">
-                <div class="card" style="width: 15rem;">
-                    <img class="card-img-top card_img" src="./image/car-2.jpg" alt="Card image cap">
-                    <div class="card-body car_info">
-                        <h5 class="card-title">Mercedes Grand Sedan</h5>
-                        <p class="card-text">petrol</p>
-                        <p class="card-text">Autometic &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span>$500</span>/Day</p>
-                        <a href="#" class="btn mt-2">Book Now </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-10 mt-4">
-                <div class="card" style="width: 15rem;">
-                    <img class="card-img-top card_img" src="./image/car-4.jpg" alt="Card image cap">
-                    <div class="card-body car_info">
-                        <h5 class="card-title">Mercedes Grand Sedan</h5>
-                        <p class="card-text">petrol</p>
-                        <p class="card-text">Autometic &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span>$500</span>/Day</p>
-                        <a href="#" class="btn mt-2">Book Now </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-10 mt-4">
-                <div class="card" style="width: 15rem;">
-                    <img class="card-img-top card_img" src="./image/car-3.jpg" alt="Card image cap">
-                    <div class="card-body car_info">
-                        <h5 class="card-title">Mercedes</h5>
-                        <p class="card-text">petrol</p>
-                        <p class="card-text">Autometic &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span>$500</span>/Day</p>
-                        <a href="#" class="btn mt-2">Book Now</a>
-                    </div>
+                <?php
+                include "./db/conn.php";
+                $sql = "SELECT * FROM `car`";
+                $result = $conn->query($sql);
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_array()) {
 
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-10 mt-4">
-                <div class="card" style="width: 15rem;">
-                    <img class="card-img-top card_img" src="./image/car-3.jpg" alt="Card image cap">
-                    <div class="card-body car_info">
-                        <h5 class="card-title">Mercedes</h5>
-                        <p class="card-text">petrol &nbsp <span>$500</span>/Day</p>
-                        <p class="card-text">Autometic &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span>$500</span>/Day</p>
-                        <a href="carBooking.php" class="btn mt-2" target="_blank">Book Now </a>
-                    </div>
-                </div>
-            </div>
+                ?>
+                        <div class="col-md-3 col-sm-10 mt-4">
+                            <div class="card" style="width: 16rem;">
+                                <img class="card-img-top card_img" src="./admin/<?php echo $row['img'] ?>" alt="Card image cap">
+                                <div class="card-body car_info">
+                                    <h5 class="card-title"><?php echo $row['name']; ?></h5>
+                                    <p class="card-text"><?php echo $row['fuel']; ?></p>
+                                    <p class="card-text"><?php echo $row['transmission']; ?> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp <span><?php echo $row['rupees'];?></span>/Day</p>
+                                    <a href="./carBooking.php?name=<?php echo $row['name'];?>&p=<?php echo $row['rupees'];?>" class="btn mt-2">Book Now </a>
+                                </div>
+                            </div>
+                        </div>
+                <?php
+                    }
+                } else {
+                    echo "<center><P>result is not found</P></center>";
+                }
+                ?>
             </div>
         </div>
     </section>
