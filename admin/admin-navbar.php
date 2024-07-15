@@ -12,7 +12,7 @@
                 <a href="./admin-add-car.php"><span><i class="fa-solid fa-square-plus mt-1"></i></span>
                 <li class="list-group-item">Add Car</li></a>
 
-                <a href="./admin-all-car.php"><span><i class="fa-solid fa-car mt-1"></i></span>
+                <a href="./admin-all-cars.php"><span><i class="fa-solid fa-car mt-1"></i></span>
                 <li class="list-group-item">Car</li></a>
 
                 <a href="http://localhost/Rent%20on%20car/"><span><i class="fa-solid fa-house"></i></span>
