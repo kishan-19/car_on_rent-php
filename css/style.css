@@ -3,11 +3,13 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* .nav_color{
+.car_navbar{
     position: fixed;
-    background: rgb(224, 226, 226);
+    background-color:black;
+    margin-left: 8px;
+    color: white;
     transition: all 0.5s;
-} */
+ }
 .header{
     background-image: url('../image/header_car.jpg');
     background-position: 50% 50%;

@@ -15,7 +15,7 @@
 
 <body>
     <div class="container-fluid header">
-        <div class="container">
+        <div class="container car_navbar">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">Car Rentals</a>
@@ -23,14 +23,20 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                <a class="nav-link" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item" allCarList>
+                                <a class="nav-link" href="#allCarList">Car</a>
+                            </li>
+                            <li class="nav-item" allCarList>
+                                <a class="nav-link" href="#service">Service</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
+                                <a class="nav-link" href="#">About</a>
                             </li>
-                            <li class="nav-item dropdown">
+                            <!-- <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Dropdown
                                 </a>
@@ -42,15 +48,12 @@
                                     </li>
                                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                            </li>
+                            </li> -->
                         </ul>
-                        <form class="d-flex">
+                        <!-- <form class="d-flex">
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success" type="submit">Search</button>
-                        </form>
+                        </form> -->
                     </div>
                 </div>
             </nav>
@@ -64,7 +67,7 @@
             </div>
         </div>
     </div>
-    <section class="bg-light way_to_rent_car">
+    <section class="bg-light way_to_rent_car" id="service">
         <div class="container py-5">
             <div class="col-md-12 d-flex justify-content-center">
                 <h2 class="fw-bold">Our Latest Services</h2>
@@ -118,7 +121,7 @@
         </div>
         </div>
     </section>
-    <section class="car_delaite">
+    <section class="car_delaite" id="allCarList">
         <div class="container py-5">
             <div class="row">
                 <?php

@@ -6,8 +6,8 @@ if (isset($_POST['add_car'])) {
     $carName = $_POST['carName'];
     $fuel = $_POST['fuel'];
     $transmission = $_POST['transmission'];
-    $img = $_FILES['img'];
     $price = $_POST['price'];
+    $img = $_FILES['img'];
 
     $file = $img['name'];
     $error = $img['error'];
@@ -49,12 +49,13 @@ if (isset($_POST['add_car'])) {
     }
 }
 
-//  edite car information
+// get edite car information
     $c_name=null;
     $c_fuel=null;
     $c_transmission=null;
     $c_rupees=null;
     $c_img=null;
+    $car_id=null;
     if(isset($_GET['carid'])){
         $car_id = $_GET['carid'];
         $sql="SELECT * FROM `car` WHERE md5(id) = '$car_id'";
@@ -66,14 +67,62 @@ if (isset($_POST['add_car'])) {
                 $c_transmission= $row["transmission"];
                 $c_rupees= $row["rupees"];
                 $c_img= $row["img"];
-            }
-            $car_img= substr($c_img,10);
-        
+            }            
         }else{
             echo "<center><P>result is not found</P></center>";
         }
     }
-       
+
+    //Edite car Informacion
+       if(isset($_POST['edite_car'])){
+        $carName = $_POST['carName'];
+        $fuel = $_POST['fuel'];
+        $transmission = $_POST['transmission'];
+        $price = $_POST['price'];
+
+        $sql="";
+        $destination="";
+        $sql.="UPDATE `car` SET `name`='$carName',`fuel`='$fuel',`transmission`='$transmission',`rupees`='$price',";
+         if($img = $_FILES['img']){
+            $file = $img['name'];
+            $error = $img['error'];
+            $filetmp = $img['tmp_name'];
+
+            $exploed = explode('.', $file);
+            $extention = strtolower(end($exploed));
+            $filetype = array('png','jpg','jpeg','webp');
+
+                if (in_array($extention, $filetype)) {
+                    $destination .= 'uplodeimg/' . $file;
+                    move_uploaded_file($filetmp, $destination);
+
+                    // $sql +="UPDATE `car` SET `name`='$carName',`fuel`='$fuel',`transmission`='$transmission',`rupees`='$price',`img`='$destination' WHERE md5(id) = '$car_id'";
+                    $sql .="`img`='$destination',";
+                }else{
+                    ?>
+                    <script>
+                         alert("image is not proper,please try again");
+                    </script>
+                    <?php
+                }
+        }
+        $sql .="`rupees`='$price' WHERE md5(id) = '$car_id'";
+        if($conn->query($sql)){
+            $conn->close();
+            ?>
+            <script>
+                alert("Edited Car Data Successfuly");
+            </script>
+            <script>window.location="./admin-all-cars.php";</script>
+            <?php
+         }else{
+             ?>
+             <script>
+                alert("Ooppss Cannot Edited car");
+             </script>
+             <?php
+         } 
+       }
 include 'admin-header.php';
 include 'admin-navbar.php';
 ?>
@@ -105,7 +154,7 @@ include 'admin-navbar.php';
         </div>
         <div class="mb-3">
             <label for="img" class="form-label">Select Image :</label>
-            <input type="file" class="form-control" id="img" name="img" required>
+            <input type="file" class="form-control" id="img" name="img" <?php if(!$c_img) echo 'required' ?>>
             <!-- <span class="text-danger" required>--220px * 220px</span> -->
         </div>
         <div class="row">
@@ -117,7 +166,17 @@ include 'admin-navbar.php';
             </div>
         </div>
         <div class="mb-3 btn_add_car">
-            <button type="submit" class="btn w-100" name="add_car">Add Car</button>
+            <?php 
+                if(!$car_id){
+                    ?>
+                        <button type="submit" class="btn w-100" name="add_car">Add Car</button>
+                    <?php
+                }else{
+                    ?>
+                        <button type="submit" class="btn w-100" name="edite_car">Edite Car</button>
+                    <?php
+                }
+                ?>
         </div>
     </form>
 </div>
