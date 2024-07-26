@@ -3,13 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
-.car_navbar{
-    position: fixed;
-    background-color:black;
-    margin-left: 8px;
-    color: white;
-    transition: all 0.5s;
- }
+
 .header{
     background-image: url('../image/header_car.jpg');
     background-position: 50% 50%;
@@ -17,7 +11,14 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-        /* background-color: transparent; */
+}
+.header div{
+    z-index: 1;
+}
+.header div nav{
+    margin-left: 130px;
+    background-color: #30303029;
+    backdrop-filter: blur(20px);
 }
 .header_card{
     background: transparent;
@@ -91,8 +92,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-border: 0px solid ;
-padding: 5px 59px 26px;
-margin-top: 12px;
-backdrop-filter: blur(10px);
+    border: 0px solid ;
+    padding: 5px 59px 26px;
+    margin-top: 12px;
+    backdrop-filter: blur(10px);
+}
+
+@media screen and (max-width: 577px) {
+    .header div nav{
+        margin-left: 0px;
+    }   
 }

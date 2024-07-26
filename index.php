@@ -15,7 +15,7 @@
 
 <body>
     <div class="container-fluid header">
-        <div class="container car_navbar">
+        <div class="container position-fixed">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">Car Rentals</a>
