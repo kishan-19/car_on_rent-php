@@ -34,7 +34,7 @@
                                 <a class="nav-link" href="#service">Service</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">About</a>
+                                <a class="nav-link" href="#about">About Us</a>
                             </li>
                             <!-- <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -76,33 +76,33 @@
                 <div class="col-md-3">
                     <div class="w-100 text-center">
                         <div class="way_to_rent d-flex justify-content-center">
-                            <div class="icon"><i class="fa-solid fa-car"></i></div>
+                            <div class="icon"><i class="fa-solid fa-ring"></i></div>
                         </div>
                         <div class="text_de my-3">
                             <h4 class="heading mb-2">Wedding Ceremony</h4>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <p>Car Rental Agency offering luxury vehicles for weddings and special events.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="w-100 text-center">
                         <div class="way_to_rent d-flex justify-content-center">
-                            <div class="icon"><i class="fa-solid fa-car"></i></div>
+                            <div class="icon"><i class="fa-solid fa-city ms-0"></i></div>
                         </div>
                         <div class="text_de my-3">
                             <h4 class="heading mb-2">City Transfer</h4>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <p>Convenient city transfer with premium car rentals for hassle-free travel experiences.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="w-100 text-center">
                         <div class="way_to_rent d-flex justify-content-center">
-                            <div class="icon"><i class="fa-solid fa-car"></i></div>
+                            <div class="icon"><i class="fa-solid fa-plane"></i></div>
                         </div>
                         <div class="text_de my-3">
                             <h4 class="heading mb-2">Airport Transfer</h4>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <p>Reliable airport transfer car rentals, ensuring comfort and convenience for seamless travel experiences.</p>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@
                         </div>
                         <div class="text_de my-3">
                             <h4 class="heading mb-2">Whole City Tour</h4>
-                            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+                            <p>Explore city highlights with our comprehensive car rental tour service. Book your adventure today!</p>
                         </div>
                     </div>
                 </div>
@@ -154,6 +154,55 @@
     </section>
 
     <!-- about -->
+     <!-- About 2 - Bootstrap Brain Component -->
+<section class="py-3 py-md-5 bg-light" id="about">
+  <div class="container">
+    <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+      <div class="col-12 col-lg-6">
+        <img class="img-fluid rounded" loading="lazy" src="./image/about.jpg" alt="About 2">
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="row justify-content-xl-center">
+          <div class="col-12 col-xl-10">
+            <h2 class="mb-3">Why Choose Us?</h2>
+            <p class="lead fs-4 mb-3 mb-xl-5">We offer a varied fleet of cars, ranging from the compact Toyota Yaris to 7-seaters, and SUVs. All our vehicles have air conditioning,  power steering, electric windows. All our vehicles are bought and maintained at official dealerships only. Automatic transmission cars are available in every booking class.</p>
+            <div class="d-flex align-items-center mb-3">
+              <div class="me-3 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+              </div>
+              <div>
+                <p class="fs-5 m-0"> Commission free rental</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+              <div class="me-3 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+              </div>
+              <div>
+                <p class="fs-5 m-0">Same day rental</p>
+              </div>
+            </div>
+            <div class="d-flex align-items-center mb-4 mb-xl-5">
+              <div class="me-3 text-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+                  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                </svg>
+              </div>
+              <div>
+                <p class="fs-5 m-0"> 24/7 telephone contact</p>
+              </div>
+            </div>
+            <button type="button" class="btn bsb-btn-xl btn-outline-primary rounded-pill">Connect Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
  <!-- Footer -->
  <footer
             class="text-center text-lg-start text-white"
