@@ -90,3 +90,22 @@
     margin-top: 12px;
     backdrop-filter: blur(10px);
 }
+
+/* meadia query */
+@media screen and (max-width: 1204px) {
+    .car_card{
+        margin-left:60px;
+    }
+}
+@media screen and (max-width: 994px) {
+    .car_card{
+        margin-left:0px;
+        margin-right: 180px;
+    }
+}
+@media screen and (max-width: 770px) {
+    .car_card{
+        margin-right: 0px;
+        margin-left:12%;
+    }
+}
