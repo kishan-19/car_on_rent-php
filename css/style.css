@@ -90,7 +90,109 @@
     margin-top: 12px;
     backdrop-filter: blur(10px);
 }
+.car_booking_form{
+    width: 450px;
+}
 
+/* login page */
+.body_bg{
+    background-image: url('../image/login.jpg');
+    background-position: 50% 50%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 100vh; */
+}
+.middle_box{
+    margin-top: 17vh;
+}
+.flex-column{
+    margin-bottom: 8px;
+}
+.flex-column > label {
+    color: #ecedec;
+    font-weight: 600;
+  }
+  
+  .inputForm {
+    border: 1.5px solid #ecedec;
+    border-radius: 10px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    margin-bottom: 20px;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .input {
+      color: #ecedec;
+    margin-left: 10px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+  ::placeholder {
+    color: #ecedec;
+    opacity: 1; /* Firefox */
+  }
+  
+  .input:focus {
+    outline: none;
+  }
+  
+  .inputForm:focus-within {
+    border: 1.5px solid #2d79f3;
+  }
+  
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  
+  .flex-row > div > label {
+    font-size: 14px;
+    color: white;
+    font-weight: 400;
+  }
+  
+  .span {
+    font-size: 14px;
+    margin-left: 5px;
+    color: #2d79f3;
+    font-weight: 500;
+    cursor: pointer;
+    text-shadow: 0px 0px 9px #2d79f3;
+  }
+  .button-submit {
+    margin: 20px 0 10px 0;
+    background-color: #000000a6;
+    border: none;
+    color: #ecedec;
+    font-size: 15px;
+    font-weight: 500;
+    font-size: larger   ;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+    text-shadow: 0px 0px 9px whitesmoke;
+  }
+  .button-submit:hover{
+    background-color: #ecedec;
+    color: #000000a6;
+  }
+  .p {
+    text-align: center;
+    color: #ecedec;
+    font-size: 14px;
+    margin: 5px 0;
+  }
 /* meadia query */
 @media screen and (max-width: 1204px) {
     .car_card{
@@ -107,5 +209,15 @@
     .car_card{
         margin-right: 0px;
         margin-left:12%;
+    }
+}
+@media screen and (max-width: 568px) {
+    .form_border{
+        padding: 5px 7px 26px;
+    }
+}
+@media screen and (max-width: 464px) {
+    .car_booking_form{
+        width: 280px;
     }
 }

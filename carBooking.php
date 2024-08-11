@@ -51,9 +51,6 @@ if (isset($_POST['booking'])) {
         <div class="d-flex justify-content-center align-items-center flex-column">
             <div class="form_border">
                 <h1>Book Your Car Today!</h1>
-                <?php
-
-                ?>
                 <form class="mt-3 car_booking_form" style="width: 450px;" method="Post">
                     <div class="mb-3">
                         <!-- <label for="carName" class="form-label">Car Name</label> -->
