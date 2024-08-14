@@ -279,7 +279,7 @@
         </div>
     </section>
     <!-- Footer -->
-    <footer class="text-center text-lg-start text-white" style="background-color: #1c2331">
+    <footer class="text-center text-lg-start text-white" id="footer_section" style="background-color: #1c2331">
         <!-- Section: Social media -->
         <section class="d-flex justify-content-between p-4" style="background-color: #6351ce">
             <!-- Left -->
