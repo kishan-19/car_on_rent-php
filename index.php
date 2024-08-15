@@ -1,8 +1,8 @@
-<?php 
-    include "./db/conn.php";
-    if(!isset($_COOKIE["name"])){
-        header('location:login.php');
-    }
+<?php
+include "./db/conn.php";
+if (!isset($_COOKIE["name"])) {
+    header('location:login.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,23 +19,25 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+
     <script type="text/javascript">
-      $(function() {
-        $("#lets_search").bind('submit',function() {
-          var value = $('#str').val();
-        //   $('#str').val().remove();
-           $.post('searchCar.php',{value:value}, function(data){
-             $("#search_results").html(data);
-           });
-           return false;
+        $(function() {
+            $("#lets_search").bind('submit', function() {
+                var value = $('#str').val();
+                //   $('#str').val().remove();
+                $.post('searchCar.php', {
+                    value: value
+                }, function(data) {
+                    $("#search_results").html(data);
+                });
+                return false;
+            });
         });
-      });
-    //   $(document).ready(function(){
-    //   $("#lets_search").click(function(event) { 
-    //         $('#str').val(""); 
-    //     });
-    // });
+        //   $(document).ready(function(){
+        //   $("#lets_search").click(function(event) { 
+        //         $('#str').val(""); 
+        //     });
+        // });
     </script>
 </head>
 
@@ -44,20 +46,20 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">Car Rentals</a>
+                    <a class="navbar-brand" href="#">NOVAcar</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#">Home</a>
-                            </li>
                             <li class="nav-item" allCarList>
                                 <a class="nav-link" href="#allCarList">Car</a>
                             </li>
                             <li class="nav-item" allCarList>
                                 <a class="nav-link" href="#service">Service</a>
+                            </li>
+                            <li class="nav-item" allCarList>
+                                <a class="nav-link" href="#map">Map</a>
                             </li>
                             <li class="nav-item me-3">
                                 <a class="nav-link" href="#about">About Us</a>
@@ -67,7 +69,7 @@
                                     <button class="btn btn-outline-dark">Logout</button>
                                 </a>
                             </li>
-                            
+
                         </ul>
                     </div>
                 </div>
@@ -75,9 +77,9 @@
         </div>
         <div class="container d-flex justify-content-center align-items-center my-auto header_card">
             <div class="col-lg-8">
-                <div class="text w-100 text-center mb-md-5 pb-md-5">
+                <div class="text w-100 text-center mb-md-5">
                     <h1 class="mb-4">Fast &amp; Easy Way To Rent A Car</h1>
-                    <p style="font-size: 18px;">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts</p>
+                    <p style="font-size: 18px;color:#e7e7e7">A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts</p>
                 </div>
             </div>
         </div>
@@ -127,19 +129,14 @@
 
     <section class="car_delaite" id="allCarList">
         <div class="container py-5">
-            <div class="row">
-                <div class="col"></div>
-                <div class="col-6">
-                <div class="d-flex justify-content-center">
+            <div class="d-flex justify-content-center">
                 <h2 class="fw-bold">Our Cars</h2>
             </div>
-                </div>
-                <div class="col">
-                   <form class="d-flex" id="lets_search">
-                            <input class="form-control me-2" type="text" placeholder="Search a car"id="str" value="" name="serach_car_name" aria-label="Search">
-                            <button class="btn btn-outline-primary" type="submit" name="search">Search</button>
-                        </form>
-                </div>
+            <div class="d-flex justify-content-end">
+                <form class="d-flex" id="lets_search">
+                    <input class="form-control me-2" type="text" placeholder="Search a car" id="str" value="" name="serach_car_name" aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit" name="search">Search</button>
+                </form>
             </div>
             <div class="row" id="search_results">
                 <?php
@@ -214,7 +211,7 @@
                                     <p class="fs-5 m-0"> 24/7 telephone contact</p>
                                 </div>
                             </div>
-                            <button type="button" class="btn bsb-btn-xl btn-outline-primary rounded-pill">Connect Now</button>
+                            <a href="#footer_section"><button type="button" class="btn bsb-btn-xl btn-outline-primary rounded-pill">Connect Now</button></a>
                         </div>
                     </div>
                 </div>
@@ -242,7 +239,7 @@
                 <div class="col-md-3">
                     <div class="w-100 text-center">
                         <div class="way_to_rent d-flex justify-content-center">
-                            <div class="icon"><i class="fa-solid fa-city ms-0"></i></div>
+                            <div class="icon"><i class="fa-solid fa-city"></i></div>
                         </div>
                         <div class="text_de my-3">
                             <h4 class="heading mb-2">City Transfer</h4>
@@ -253,7 +250,7 @@
                 <div class="col-md-3">
                     <div class="w-100 text-center">
                         <div class="way_to_rent d-flex justify-content-center">
-                            <div class="icon"><i class="fa-solid fa-plane"></i></div>
+                         <div class="icon"><i class="fa-solid fa-plane"></i></div>
                         </div>
                         <div class="text_de my-3">
                             <h4 class="heading mb-2">Airport Transfer</h4>
@@ -275,6 +272,9 @@
             </div>
         </div>
         </div>
+    </section>
+    <section id="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35531.48591998987!2d70.72881143739983!3d22.282177678820666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959c98ac71cdf0f%3A0x76dd15cfbe93ad3b!2sRajkot%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1723727920552!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
     <!-- Footer -->
     <footer class="text-center text-lg-start text-white" id="footer_section" style="background-color: #1c2331">
@@ -374,7 +374,7 @@
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold">Contact</h6>
                         <hr class="mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; background-color: #7c4dff; height: 2px" />
-                        <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                        <p><i class="fas fa-home mr-3"></i> Near By Madhapar ,Rajkot</p>
                         <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
                         <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
                         <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
@@ -388,8 +388,8 @@
 
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            © 2020 Copyright:
-            <a class="text-white" href="http://localhost/NOVAcar/">NOVAcar.com</a>
+            © 2024 Copyright:
+            <a class="text-white" href="http://localhost/novacar/">NOVAcar.com</a>
         </div>
         <!-- Copyright -->
     </footer>

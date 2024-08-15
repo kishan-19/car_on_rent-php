@@ -45,7 +45,9 @@
 }
 
 /* all car */
-
+#search_results{
+    overflow: hidden;
+}
 .card_img{
     width: 15rem;
     height: 10rem;
@@ -208,7 +210,7 @@
 @media screen and (max-width: 770px) {
     .car_card{
         margin-right: 0px;
-        margin-left:12%;
+        margin-left:11%;
     }
 }
 @media screen and (max-width: 568px) {

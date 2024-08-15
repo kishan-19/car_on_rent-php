@@ -85,11 +85,14 @@ if (isset($_POST['edite_car'])) {
     $fuel = $_POST['fuel'];
     $transmission = $_POST['transmission'];
     $price = $_POST['price'];
+    $arr= $_FILES['img'];
+    $file = $arr['name'];
 
     $sql = "";
     $destination = "";
     $sql .= "UPDATE `car` SET `name`='$carName',`fuel`='$fuel',`transmission`='$transmission',`rupees`='$price',";
-    if ($img = $_FILES['img']) {
+    if ($file) {
+        $img = $_FILES['img'];
         $file = $img['name'];
         $error = $img['error'];
         $filetmp = $img['tmp_name'];

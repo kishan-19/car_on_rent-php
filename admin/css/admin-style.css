@@ -16,7 +16,9 @@ body {
     font-style: oblique;
     font-family: fangsong;
 }
-
+.admin_nav{
+    overflow-x: auto;
+}
 .admin_nav ul a {
     display: flex;
     align-items: center;

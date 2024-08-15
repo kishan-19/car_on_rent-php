@@ -17,6 +17,7 @@ if (isset($_POST['login'])) {
                 header('location:index.php');
             }
         }
+    }
         if ($match == false) {
 ?>
             <script>
@@ -24,7 +25,6 @@ if (isset($_POST['login'])) {
             </script>
 <?php
         }
-    }
     $conn->close();
 }
 ?>

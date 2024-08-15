@@ -3,7 +3,7 @@
         <h1 class="admin_page_heading">Admin Page</h1>
         <div class="admin_nav">
             <ul class="list-group list-group-horizontal">
-                <a href="#"><span><i class="fa-solid fa-user"></i></span>
+                <a href="./admin-user-list.php"><span><i class="fa-solid fa-user"></i></span>
                 <li class="list-group-item">User</li></a>
 
                 <a href="./index.php"><span><i class="fa-solid fa-table-list mt-1"></i></span>
@@ -15,7 +15,7 @@
                 <a href="./admin-all-cars.php"><span><i class="fa-solid fa-car mt-1"></i></span>
                 <li class="list-group-item">Car</li></a>
 
-                <a href="http://localhost/Rent%20on%20car/"><span><i class="fa-solid fa-house"></i></span>
+                <a href="http://localhost/novacar/"><span><i class="fa-solid fa-house"></i></span>
                 <li class="list-group-item">Home</li></a>
             </ul>
         </div>

@@ -2,7 +2,7 @@
 include "./db/conn.php";
 
 // $query = "SELECT * FROM `car` WHERE name ='" . $_POST['value'] . "'";
-$query = "SELECT * FROM `car` WHERE name LIKE '%" . $_POST['value'] . "%'";
+$query = "SELECT * FROM `car` WHERE name LIKE '%" . $_POST['value'] . "%' OR rupees LIKE '%" . $_POST['value'] . "%'";
 // $sql="SELECT * FROM itema WHERE name LIKE '%$query%' OR deltails LIKE '%$query%'";
 
 $result = $conn->query($query);
