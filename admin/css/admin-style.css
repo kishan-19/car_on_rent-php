@@ -74,9 +74,26 @@ hr {
     border: 1px solid black;
 }
 
-/* cars List */
-
-
+/* login page */
+.login_form{
+    justify-content: center;
+    display: grid;
+    margin-top: 10vh;
+}
+.login_form tr td{
+    padding: 9px;
+}
+.btn_login{
+    background-color: rgb(98, 98, 104);
+    color: black;
+    border-radius:5px;
+    border:1px solid black;
+    font-size:17px;
+    padding: 5px 15px 5px;
+}
+.btn_login:hover{
+background:#414f9deb;
+}
 
 @media screen and (max-width: 526px) {
 

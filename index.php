@@ -1,3 +1,9 @@
+<?php 
+    include "./db/conn.php";
+    if(!isset($_COOKIE["name"])){
+        header('location:login.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,22 +59,15 @@
                             <li class="nav-item" allCarList>
                                 <a class="nav-link" href="#service">Service</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item me-3">
                                 <a class="nav-link" href="#about">About Us</a>
                             </li>
-                            <!-- <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
+                            <li class="nav-item">
+                                <a href="logout.php">
+                                    <button class="btn btn-outline-dark">Logout</button>
                                 </a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </li> -->
+                            </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -144,7 +143,6 @@
             </div>
             <div class="row" id="search_results">
                 <?php
-                include "./db/conn.php";
                 $sql = "SELECT * FROM `car`";
                 $result = $conn->query($sql);
                 if ($result->num_rows > 0) {

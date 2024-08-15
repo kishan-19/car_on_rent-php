@@ -1,6 +1,10 @@
 <?php
 include 'admin-header.php';
 include 'admin-navbar.php';
+session_start();
+    if(!isset($_SESSION['username'])){
+            header('location:admin-login.php');
+    }
 ?>
 <div>
     <h2 class="d-flex justify-content-center mb-3"><span><i class="fa-solid fa-circle fa-2xs h-2"></i></span>&nbsp Booking List &nbsp<span><i class="fa-solid fa-circle fa-2xs"></i></span></h2>

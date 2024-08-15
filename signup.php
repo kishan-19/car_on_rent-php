@@ -1,5 +1,7 @@
 <?php
-
+if(isset($_COOKIE["name"])){
+    header('location:index.php');
+}
 if (isset($_POST['signup'])) {
     $username = $_POST['username'];
     $email = $_POST['email'];
@@ -94,7 +96,7 @@ if (isset($_POST['signup'])) {
                         <input placeholder="Enter your Password" class="input" name="password" minlength="4" type="password" required>
                     </div>
                     <button class="button-submit" type="submit" name="signup">Sign up</button>
-                    <p class="p">Already have a account? <span class="span">Login</span>
+                        <p class="p">Already have a account? <a href="login.php"><span class="span">Login</span></a>
                 </form>
             </div>
         </div>

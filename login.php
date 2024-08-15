@@ -1,32 +1,31 @@
 <?php
+if (isset($_COOKIE["name"])) {
+    header('location:index.php');
+}
 if (isset($_POST['login'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     include "./db/conn.php";
-    $sql = "SELECT `email`, `password` FROM `user list`";
+    $sql = "SELECT `username` , `email`, `password` FROM `user list`";
     $result = $conn->query($sql);
     $match = false;
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_array()) {
             if ($row['email'] == $email && $row['password'] == $password) {
                 $match = true;
+                setcookie("name", $row['username'], time() + 3600);
+                header('location:index.php');
             }
         }
-        $conn->close();
-        if ($match == true) {
+        if ($match == false) {
 ?>
-            <script>
-            window.location = "./index.php";
-            </script>
-        <?php
-        } else {
-        ?>
             <script>
                 alert('Invalid username or password');
             </script>
 <?php
         }
     }
+    $conn->close();
 }
 ?>
 <!DOCTYPE html>
@@ -83,7 +82,7 @@ if (isset($_POST['login'])) {
                         <input placeholder="Enter your Password" class="input" type="password" name="password" required>
                     </div>
                     <button class="button-submit" type="submit" name="login">Login</button>
-                    <p class="p">Don't have an account? <span class="span">Sign Up</span>
+                    <p class="p">Don't have an account? <a href="signup.php"><span class="span">Sign Up</span></a>
                 </form>
             </div>
         </div>
