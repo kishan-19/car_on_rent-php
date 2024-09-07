@@ -52,7 +52,7 @@
                                 <td class="pt-4"><?php echo $row['transmission']; ?></td>
                                 <td class="pt-4"><?php echo $row['rupees']; ?></td>
                                 <td><img src="./<?php echo $row['img'] ?>" alt="Card image cap" width="110px" height="77px"></td>
-                                <td><a href="admin-add-car.php?carid=<?php echo md5($row['id']); ?>"><button type="submit" class="btn btn-outline-info m-2">Edite</button></a>
+                                <td><a href="admin-add-car.php?carid=<?php echo md5($row['id']); ?>"><button type="submit" class="btn btn-outline-info m-2">Edit</button></a>
                                     <a href="admin-all-cars.php?carid=<?php echo md5($row['id']); ?>"><button type="submit" class="btn btn-outline-danger m-2">Delete</button></a>
                                 </td>
                             </tr>

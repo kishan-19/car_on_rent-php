@@ -55,7 +55,7 @@ if (isset($_POST['add_car'])) {
     }
 }
 
-// get edite car information
+// get edit car information
 $c_name = null;
 $c_fuel = null;
 $c_transmission = null;
@@ -79,7 +79,7 @@ if (isset($_GET['carid'])) {
     }
 }
 
-//Edite car Informacion
+//Edit car Informacion
 if (isset($_POST['edite_car'])) {
     $carName = $_POST['carName'];
     $fuel = $_POST['fuel'];
@@ -184,7 +184,7 @@ include 'admin-navbar.php';
             <?php
             } else {
             ?>
-                <button type="submit" class="btn w-100" name="edite_car">Edite Car</button>
+                <button type="submit" class="btn w-100" name="edite_car">Edit Car</button>
             <?php
             }
             ?>
