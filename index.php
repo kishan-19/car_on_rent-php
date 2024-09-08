@@ -43,8 +43,8 @@ if (!isset($_COOKIE["name"])) {
 
 <body>
     <div class="container-fluid header">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">NOVAcar</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,13 +56,19 @@ if (!isset($_COOKIE["name"])) {
                                 <a class="nav-link" href="#allCarList">Car</a>
                             </li>
                             <li class="nav-item" allCarList>
+                                <a class="nav-link" href="#map">Map</a>
+                            </li>
+                            <li class="nav-item" allCarList>
                                 <a class="nav-link" href="#service">Service</a>
                             </li>
                             <li class="nav-item" allCarList>
-                                <a class="nav-link" href="#map">Map</a>
+                                <a class="nav-link" href="#customer">Customer</a>
                             </li>
-                            <li class="nav-item me-3">
-                                <a class="nav-link" href="#about">About Us</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#about">About</a>
+                            </li>
+                            <li class="nav-item me-4">
+                                <a class="nav-link" href="#footer_section">Contact</a>
                             </li>
                             <li class="nav-item">
                                 <a href="logout.php">
@@ -250,7 +256,7 @@ if (!isset($_COOKIE["name"])) {
                 <div class="col-md-3">
                     <div class="w-100 text-center">
                         <div class="way_to_rent d-flex justify-content-center">
-                         <div class="icon"><i class="fa-solid fa-plane"></i></div>
+                            <div class="icon"><i class="fa-solid fa-plane"></i></div>
                         </div>
                         <div class="text_de my-3">
                             <h4 class="heading mb-2">Airport Transfer</h4>
@@ -271,6 +277,97 @@ if (!isset($_COOKIE["name"])) {
                 </div>
             </div>
         </div>
+        </div>
+    </section>
+
+    <!-- happy customer -->
+    <section id="customer">
+        <div class="container">
+        <div class="col-md-12 d-flex justify-content-center mt-3">
+                <h2 class="fw-bold">Happy Customer</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-3 col-sm-10">
+                    <div class="card happy_customer_card my-3">
+                        <div class="customer_image d-flex justify-content-center align-items-center mt-3">
+                            <img src="./image/person_1.jpg" class="card-img-top" alt="Customer">
+                        </div>
+                        <div class="card-body customer_body">
+                            <h5 class="card-title d-flex justify-content-center align-items-center">David Johnson</h5>
+                            <p class="card-text d-flex justify-content-center align-items-center">Simple checkout, efficient service, good car. Very pleased.</p>
+                        </div>
+                        <div class="customer_reviews">
+                            <ul>
+                                <li>&#9733;</li>
+                                <li>&#9733;</li>
+                                <li>&#9733;</li>
+                                <li>&#9733;</li>
+                                <li>&#9733;</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-10">
+                    <div class="card happy_customer_card my-3">
+                        <div class="customer_image d-flex justify-content-center align-items-center mt-3">
+                            <img src="./image/person_2.jpg" class="card-img-top" alt="Customer">
+                        </div>
+                        <div class="card-body customer_body">
+                            <h5 class="card-title d-flex justify-content-center align-items-center">Robert Miller</h5>
+                            <p class="card-text d-flex justify-content-center align-items-center">Quick service, clean cars, great prices. Highly recommend!</p>
+                        </div>
+                        <div class="customer_reviews">
+                            <ul>
+                                <li>&#9733;</li>
+                                <li>&#9733;</li>
+                                <li>&#9733;</li>
+                                <li>&#9733;</li>
+                                <li>&#9733;</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-10">
+                    <div class="card happy_customer_card my-3">
+                        <div class="customer_image d-flex justify-content-center align-items-center mt-3">
+                            <img src="./image/person_3.jpg" class="card-img-top" alt="Customer">
+                        </div>
+                        <div class="card-body customer_body">
+                            <h5 class="card-title d-flex justify-content-center align-items-center">James Davis</h5>
+                            <p class="card-text d-flex justify-content-center align-items-center">Easy booking, reliable vehicle, smooth process. Will return..</p>
+                        </div>
+                        <div class="customer_reviews">
+                            <ul>
+                                <li>&#9733;</li>
+                                <li>&#9733;</li>
+                                <li>&#9733;</li>
+                                <li>&#9733;</li>
+                                <li>&#9733;</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-10">
+                    <div class="card happy_customer_card my-3">
+                        <div class="customer_image d-flex justify-content-center align-items-center mt-3">
+                            <img src="./image/person_4.jpg" class="card-img-top" alt="Customer">
+                        </div>
+                        <div class="card-body customer_body">
+                            <h5 class="card-title d-flex justify-content-center align-items-center">John Deo</h5>
+                            <p class="card-text d-flex justify-content-center align-items-center">Car was perfect, no issues. Best rental ever!</p>
+                        </div>
+                        <div class="customer_reviews">
+                            <ul>
+                                <li>&#9733;</li>
+                                <li>&#9733;</li>
+                                <li>&#9733;</li>
+                                <li>&#9733;</li>
+                                <li>&#9733;</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section id="map">
